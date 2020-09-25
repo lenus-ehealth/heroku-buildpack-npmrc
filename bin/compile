@@ -5,4 +5,5 @@ build_dir=${1:-}
 
 echo "-----> appending to .npmrc from config var NPMRC"
 echo "$NPMRC" >> "$build_dir/.npmrc"
+cat "$build_dir/.npmrc"
 exit 0
