@@ -2,10 +2,7 @@
 
 ENV_DIR=${3:-}
 build_dir=${1:-}
-npmrc="$(cat $ENV_DIR/NPMRC)"
 
-if [ "$npmrc" != "" ]; then
-	echo "-----> Using .npmrc from config var NPMRC"
-	echo "$npmrc" > "$build_dir/.npmrc"
-	exit 0
-fi
+echo "-----> appending to .npmrc from config var NPMRC"
+echo "$npmrc" >> "$build_dir/.npmrc"
+exit 0
