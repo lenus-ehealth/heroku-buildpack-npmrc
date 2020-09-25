@@ -4,7 +4,5 @@ ENV_DIR=${3:-}
 build_dir=${1:-}
 
 echo "-----> appending to .npmrc from config var NPMRC"
-echo "$npmrc" >> "$build_dir/.npmrc"
-ls "$build_dir"
-cat "$build_dir/.npmrc"
+echo "$NPMRC" >> "$build_dir/.npmrc"
 exit 0
